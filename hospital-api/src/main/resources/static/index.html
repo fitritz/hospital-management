@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hospital Management Dashboard</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <div class="backdrop backdrop-a"></div>
+  <div class="backdrop backdrop-b"></div>
+
+  <main class="shell">
+    <section class="hero card">
+      <div>
+        <p class="eyebrow">Hospital Management System</p>
+        <h1>Web dashboard for patients, doctors, and appointments</h1>
+        <p class="lede">This is the browser frontend Railway can show publicly. It talks to the Spring Boot API on the
+          same service.</p>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span>API</span>
+          <strong id="apiStatus">Checking...</strong>
+        </div>
+        <div class="stat">
+          <span>Patients</span>
+          <strong id="patientCount">0</strong>
+        </div>
+        <div class="stat">
+          <span>Doctors</span>
+          <strong id="doctorCount">0</strong>
+        </div>
+        <div class="stat">
+          <span>Appointments</span>
+          <strong id="appointmentCount">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Patients</p>
+            <h2>Manage patient records</h2>
+          </div>
+          <button class="ghost" id="reloadPatients">Refresh</button>
+        </div>
+        <form id="patientForm" class="form">
+          <input name="name" placeholder="Name" required>
+          <input name="age" type="number" min="0" placeholder="Age" required>
+          <input name="gender" placeholder="Gender" required>
+          <input name="contact" placeholder="Contact" required>
+          <button type="submit">Add Patient</button>
+        </form>
+        <div id="patientsList" class="list"></div>
+      </article>
+
+      <article class="card panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Doctors</p>
+            <h2>Manage doctor records</h2>
+          </div>
+          <button class="ghost" id="reloadDoctors">Refresh</button>
+        </div>
+        <form id="doctorForm" class="form">
+          <input name="name" placeholder="Name" required>
+          <input name="specialization" placeholder="Specialization" required>
+          <input name="contact" placeholder="Contact" required>
+          <button type="submit">Add Doctor</button>
+        </form>
+        <div id="doctorsList" class="list"></div>
+      </article>
+
+      <article class="card panel wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Appointments</p>
+            <h2>Book and view visits</h2>
+          </div>
+          <button class="ghost" id="reloadAppointments">Refresh</button>
+        </div>
+        <form id="appointmentForm" class="form appointment-form">
+          <select name="patientId" id="patientSelect" required></select>
+          <select name="doctorId" id="doctorSelect" required></select>
+          <input name="scheduledAt" type="datetime-local" required>
+          <button type="submit">Add Appointment</button>
+        </form>
+        <div id="appointmentsList" class="list"></div>
+      </article>
+    </section>
+
+    <section class="footer-note">
+      <a href="/api/health" target="_blank" rel="noreferrer">/api/health</a>
+      <span>·</span>
+      <a href="/api/patients" target="_blank" rel="noreferrer">/api/patients</a>
+      <span>·</span>
+      <a href="/api/doctors" target="_blank" rel="noreferrer">/api/doctors</a>
+    </section>
+  </main>
+
+  <template id="rowTemplate">
+    <div class="row-item">
+      <div class="row-main">
+        <strong></strong>
+        <p></p>
+      </div>
+      <button class="delete">Delete</button>
+    </div>
+  </template>
+
+  <script src="/app.js"></script>
+</body>
+
+</html>
