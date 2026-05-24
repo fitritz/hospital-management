@@ -11,8 +11,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 
 @Repository
+@ConditionalOnMissingBean(com.local.hospitalapi.repository.HospitalRepository.class)
 public class HospitalJdbcRepository implements HospitalRepository {
 
   private final JdbcTemplate jdbcTemplate;
@@ -45,14 +47,14 @@ public class HospitalJdbcRepository implements HospitalRepository {
   public List<AppointmentView> loadAppointments() {
     return jdbcTemplate.query(
         """
-        SELECT a.id, a.patient_id, a.doctor_id, a.scheduled_at,
-               p.name AS patient_name,
-               d.name AS doctor_name
-        FROM appointments a
-        JOIN patients p ON p.id = a.patient_id
-        JOIN doctors d ON d.id = a.doctor_id
-        ORDER BY a.id
-        """,
+            SELECT a.id, a.patient_id, a.doctor_id, a.scheduled_at,
+                   p.name AS patient_name,
+                   d.name AS doctor_name
+            FROM appointments a
+            JOIN patients p ON p.id = a.patient_id
+            JOIN doctors d ON d.id = a.doctor_id
+            ORDER BY a.id
+            """,
         (rs, rowNum) -> new AppointmentView(
             rs.getInt("id"),
             rs.getInt("patient_id"),
