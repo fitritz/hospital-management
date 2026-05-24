@@ -25,9 +25,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class HospitalController {
 
-  private final HospitalJdbcRepository repository;
+  private final com.local.hospitalapi.repository.HospitalRepository repository;
 
-  public HospitalController(HospitalJdbcRepository repository) {
+  public HospitalController(com.local.hospitalapi.repository.HospitalRepository repository) {
     this.repository = repository;
   }
 

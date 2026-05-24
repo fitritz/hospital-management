@@ -13,7 +13,7 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class HospitalJdbcRepository {
+public class HospitalJdbcRepository implements HospitalRepository {
 
   private final JdbcTemplate jdbcTemplate;
 
