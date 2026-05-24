@@ -1,0 +1,119 @@
+:root {
+  /* Spacing */
+  -spacing-1: 4px;
+  -spacing-2: 8px;
+  -spacing-3: 16px;
+  -spacing-4: 24px;
+
+  /* Colors */
+  -bg: #F1F5F9;
+  -surface: #FFFFFF;
+  -primary: #0F172A;
+  -secondary: #1E293B;
+  -accent: #06B6D4;
+  -success: #22C55E;
+  -warning: #F59E0B;
+  -danger: #EF4444;
+
+  /* Radii */
+  -radius-lg: 20px;
+  -radius-md: 12px;
+  -shadow-1: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+/* Design tokens as reusable style classes */
+
+/* Color tokens */
+.token-primary {
+  /* use with -fx-text-fill, -fx-background-color as needed via style linking */
+  -token-primary: #0B74FF;
+}
+
+.token-primary-attenuate {
+  -token-primary-attenuate: rgba(11, 116, 255, 0.12);
+}
+
+.token-surface-0 {
+  -token-surface-0: #F7FAFC;
+}
+
+.token-surface-1 {
+  -token-surface-1: #FFFFFF;
+}
+
+.token-surface-2 {
+  -token-surface-2: rgba(255, 255, 255, 0.04);
+}
+
+.token-neutral-6 {
+  -token-neutral-6: #0E2033;
+}
+
+.token-success {
+  -token-success: #16A34A;
+}
+
+.token-error {
+  -token-error: #E12D39;
+}
+
+.token-warning {
+  -token-warning: #F59E0B;
+}
+
+/* Elevation tokens — apply predefined effects where needed */
+.token-shadow-subtle {
+  -fx-effect: dropshadow(gaussian, rgba(2, 8, 23, 0.06), 14, 0.08, 0, 6);
+}
+
+.token-shadow-mid {
+  -fx-effect: dropshadow(gaussian, rgba(2, 8, 23, 0.08), 24, 0.10, 0, 10);
+}
+
+.token-shadow-high {
+  -fx-effect: dropshadow(gaussian, rgba(2, 8, 23, 0.12), 40, 0.12, 0, 18);
+}
+
+/* Spacing helpers (use in layout classes) */
+.gap-8 {
+  -fx-padding: 8;
+}
+
+.gap-12 {
+  -fx-padding: 12;
+}
+
+.gap-16 {
+  -fx-padding: 16;
+}
+
+/* Typeface tokens (referenced by base.css) */
+.token-font-ui {
+  -fx-font-family: 'Inter', 'Segoe UI', system;
+}
+
+.token-font-display {
+  -fx-font-family: 'Source Serif Pro', 'Georgia', serif;
+}
+
+/* Utility text colors */
+.text-muted {
+  -fx-text-fill: rgba(34, 58, 84, 0.6);
+}
+
+.text-strong {
+  -fx-text-fill: #0E2033;
+}
+
+/* Buttons color helpers (applied programmatically or via composite classes) */
+.btn-primary-bg {
+  -fx-background-color: linear-gradient(to right, #0B74FF, #18978A);
+  -fx-text-fill: white;
+}
+
+.btn-danger-bg {
+  -fx-background-color: linear-gradient(to right, #E12D39, #C53030);
+  -fx-text-fill: white;
+}
+
+/* Note: JavaFX doesn't support CSS custom properties; token classes serve as style helpers to apply consistent values. */

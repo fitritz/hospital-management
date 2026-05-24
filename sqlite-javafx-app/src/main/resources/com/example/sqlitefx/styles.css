@@ -1,0 +1,63 @@
+.root {
+  -fx-font-family: "Segoe UI", "Inter", "Arial", sans-serif;
+  -fx-background-color: linear-gradient(to bottom right, #f6f8fc, #eef3ff);
+}
+
+.app-title {
+  -fx-font-size: 28px;
+  -fx-font-weight: 700;
+  -fx-text-fill: #16213e;
+}
+
+.app-subtitle {
+  -fx-font-size: 13px;
+  -fx-text-fill: #54617a;
+}
+
+.card {
+  -fx-background-color: rgba(255, 255, 255, 0.9);
+  -fx-background-radius: 14;
+  -fx-padding: 16;
+  -fx-border-color: rgba(22, 33, 62, 0.08);
+  -fx-border-radius: 14;
+  -fx-effect: dropshadow(gaussian, rgba(20, 33, 61, 0.12), 20, 0.2, 0, 6);
+}
+
+.button {
+  -fx-background-radius: 10;
+  -fx-padding: 10 16;
+  -fx-cursor: hand;
+}
+
+.primary-button {
+  -fx-background-color: #1f6feb;
+  -fx-text-fill: white;
+}
+
+.secondary-button {
+  -fx-background-color: #dfe7f5;
+  -fx-text-fill: #16213e;
+}
+
+.danger-button {
+  -fx-background-color: #d64545;
+  -fx-text-fill: white;
+}
+
+.text-field {
+  -fx-background-radius: 10;
+  -fx-border-radius: 10;
+  -fx-border-color: #cfd8e6;
+  -fx-padding: 10;
+}
+
+.table-view {
+  -fx-background-radius: 12;
+  -fx-border-radius: 12;
+  -fx-border-color: #d7dfeb;
+}
+
+.status-label {
+  -fx-text-fill: #34455f;
+  -fx-padding: 6 0 0 0;
+}

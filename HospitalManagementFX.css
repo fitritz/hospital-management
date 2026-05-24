@@ -1,0 +1,326 @@
+/* Application stylesheet */
+@import url('theme/tokens.css');
+@import url('theme/base.css');
+@import url('components/cards.css');
+@import url('components/buttons.css');
+
+/* Additional overrides and component styles */
+
+.log-area {
+  -fx-background-color: linear-gradient(to bottom, rgba(0, 0, 0, 0.02), transparent);
+  -fx-border-radius: 12px;
+}
+
+.topbar-welcome {
+  -fx-font-size: 16px;
+  -fx-font-weight: 600;
+  -fx-text-fill: -primary;
+}
+
+.topbar-datetime {
+  -fx-text-fill: -secondary;
+}
+
+.sidebar-collapse {
+  -fx-background-color: transparent;
+  -fx-text-fill: rgba(255, 255, 255, 0.7);
+}
+
+.app-root {
+  -fx-font-family: "Segoe UI", "Inter", "Trebuchet MS", sans-serif;
+  -fx-background-color: linear-gradient(to bottom right, #f7fbfc, #f0f6ff);
+  -fx-padding: 12;
+}
+
+.hero-panel {
+  -fx-background-color: linear-gradient(to right, #0b3954, #126e82 60%);
+  -fx-background-radius: 18;
+  -fx-padding: 18 20 18 20;
+  -fx-effect: dropshadow(gaussian, rgba(9, 34, 55, 0.18), 18, 0.12, 0, 6);
+}
+
+.app-title {
+  -fx-font-family: "Georgia";
+  -fx-font-size: 28px;
+  -fx-font-weight: 700;
+  -fx-text-fill: white;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 6, 0.08, 0, 2);
+}
+
+.app-subtitle {
+  -fx-font-size: 13px;
+  -fx-text-fill: rgba(255, 255, 255, 0.84);
+}
+
+.dashboard-row {
+  -fx-alignment: center-left;
+}
+
+.stat-card {
+  -fx-background-color: linear-gradient(to bottom right, rgba(255, 255, 255, 0.96), rgba(250, 250, 255, 0.9));
+  -fx-background-radius: 14;
+  -fx-border-color: rgba(20, 43, 68, 0.08);
+  -fx-border-radius: 14;
+  -fx-padding: 12 14 12 14;
+  -fx-effect: dropshadow(gaussian, rgba(19, 32, 54, 0.05), 14, 0.10, 0, 4);
+}
+
+.stat-card:hover {
+  /* Hover elevation handled via Java code transitions for broad compatibility */
+  -fx-effect: dropshadow(gaussian, rgba(19, 32, 54, 0.12), 18, 0.12, 0, 8);
+}
+
+.patients-card {
+  -fx-border-color: rgba(28, 119, 100, 0.35);
+}
+
+.doctors-card {
+  -fx-border-color: rgba(16, 108, 164, 0.35);
+}
+
+.appointments-card {
+  -fx-border-color: rgba(185, 94, 63, 0.35);
+}
+
+.stat-label {
+  -fx-font-size: 12px;
+  -fx-font-weight: 800;
+  -fx-text-fill: #5f6b7a;
+}
+
+.stat-value {
+  -fx-font-size: 28px;
+  -fx-font-weight: 800;
+  -fx-text-fill: #0d3b66;
+}
+
+.main-tabs {
+  -fx-background-color: transparent;
+}
+
+.main-tabs>.tab-header-area {
+  -fx-padding: 8 0 0 0;
+}
+
+.main-tabs .tab-header-area .tab-header-background {
+  -fx-background-color: transparent;
+}
+
+.main-tabs .tab {
+  -fx-background-insets: 0;
+  -fx-background-radius: 14 14 0 0;
+  -fx-background-color: rgba(255, 255, 255, 0.58);
+  -fx-padding: 9 18 9 18;
+}
+
+.main-tabs .tab:selected {
+  -fx-background-color: rgba(255, 255, 255, 0.95);
+  -fx-effect: dropshadow(gaussian, rgba(18, 34, 53, 0.08), 10, 0.12, 0, 2);
+}
+
+.main-tabs .tab-label {
+  -fx-font-size: 13px;
+  -fx-font-weight: 700;
+  -fx-text-fill: #233247;
+}
+
+.main-tabs>.tab-content-area {
+  -fx-background-color: transparent;
+  -fx-padding: 10 0 0 0;
+}
+
+.top-toolbar {
+  -fx-padding: 10 0 10 0;
+  -fx-spacing: 10;
+  -fx-alignment: center-left;
+}
+
+.search-box {
+  -fx-pref-width: 360;
+  -fx-background-color: rgba(255, 255, 255, 0.98);
+  -fx-background-radius: 999;
+  -fx-border-radius: 999;
+  -fx-border-color: rgba(18, 34, 56, 0.06);
+  -fx-padding: 8 12 8 12;
+  -fx-effect: dropshadow(gaussian, rgba(16, 32, 48, 0.04), 8, 0.08, 0, 2);
+}
+
+.fab {
+  -fx-background-color: linear-gradient(to bottom right, #16a085, #1abc9c);
+  -fx-text-fill: white;
+  -fx-background-radius: 999;
+  -fx-min-width: 52px;
+  -fx-min-height: 52px;
+  -fx-font-size: 20px;
+  -fx-effect: dropshadow(gaussian, rgba(10, 40, 30, 0.18), 20, 0.12, 0, 6);
+}
+
+.data-list .list-cell:hover {
+  -fx-background-color: rgba(15, 98, 110, 0.04);
+  -fx-translate-y: -2;
+}
+
+.card-pane .secondary-action {
+  -fx-font-size: 11px;
+  -fx-text-fill: #0d3b66;
+}
+
+.content-split {
+  -fx-padding: 2 0 0 0;
+}
+
+.card-pane {
+  -fx-background-color: rgba(255, 255, 255, 0.93);
+  -fx-background-radius: 16;
+  -fx-border-color: rgba(16, 31, 49, 0.1);
+  -fx-border-radius: 16;
+  -fx-effect: dropshadow(gaussian, rgba(15, 27, 45, 0.09), 20, 0.12, 0, 5);
+}
+
+.section-title {
+  -fx-font-family: "Georgia";
+  -fx-font-size: 16px;
+  -fx-font-weight: 700;
+  -fx-text-fill: #0d3b66;
+}
+
+.form-grid .label {
+  -fx-font-weight: 700;
+  -fx-text-fill: #2c3b4b;
+}
+
+.text-field,
+.combo-box-base,
+.text-area {
+  -fx-background-color: rgba(255, 255, 255, 0.98);
+  -fx-background-insets: 0;
+  -fx-background-radius: 10;
+  -fx-border-radius: 10;
+  -fx-border-color: rgba(28, 52, 80, 0.14);
+  -fx-padding: 10 12 10 12;
+  /* Transitions handled in code */
+}
+
+.text-field:focused,
+.combo-box-base:focused,
+.text-area:focused {
+  -fx-border-color: #1f7a8c;
+  -fx-effect: dropshadow(gaussian, rgba(31, 122, 140, 0.2), 8, 0.18, 0, 0);
+}
+
+.combo-box .list-cell {
+  -fx-padding: 6 9 6 9;
+}
+
+.primary-button,
+.secondary-button,
+.danger-button {
+  -fx-font-weight: 700;
+  -fx-background-radius: 10;
+  -fx-padding: 10 16 10 16;
+  -fx-cursor: hand;
+  -fx-alignment: center;
+}
+
+.primary-button {
+  -fx-background-color: linear-gradient(to right, #0b7285, #18978a);
+  -fx-text-fill: white;
+  -fx-effect: dropshadow(gaussian, rgba(12, 58, 64, 0.18), 8, 0.08, 0, 3);
+}
+
+.primary-button:hover {
+  -fx-background-color: linear-gradient(to right, #1187a8, #24a187);
+}
+
+.secondary-button {
+  -fx-background-color: linear-gradient(to right, #f1f7ff, #e3f2ff);
+  -fx-text-fill: #0d3b66;
+  -fx-border-color: rgba(13, 59, 102, 0.22);
+  -fx-border-radius: 10;
+}
+
+.secondary-button:hover {
+  -fx-background-color: linear-gradient(to right, #e6f1ff, #d4e9ff);
+}
+
+.danger-button {
+  -fx-background-color: linear-gradient(to right, #c2410c, #dc2626);
+  -fx-text-fill: white;
+}
+
+.danger-button:hover {
+  -fx-background-color: linear-gradient(to right, #d04b17, #e03a3a);
+}
+
+.data-list {
+  -fx-background-color: rgba(255, 255, 255, 0.92);
+  -fx-background-radius: 12;
+  -fx-border-color: rgba(17, 35, 58, 0.08);
+  -fx-border-radius: 12;
+  -fx-padding: 6;
+}
+
+.data-list .list-cell {
+  -fx-padding: 10 12 10 12;
+  -fx-background-color: transparent;
+  -fx-text-fill: #13263f;
+  -fx-wrap-text: true;
+  /* Transitions handled in code */
+}
+
+.list-item-title {
+  -fx-font-size: 13px;
+  -fx-font-weight: 700;
+  -fx-text-fill: #0d2d49;
+}
+
+.list-item-meta {
+  -fx-font-size: 11px;
+  -fx-text-fill: #4a5a6a;
+}
+
+.list-item-contact {
+  -fx-font-size: 11px;
+  -fx-text-fill: #0d5566;
+  -fx-alignment: center-right;
+}
+
+.list-item-badge {
+  -fx-background-color: rgba(16, 108, 164, 0.12);
+  -fx-padding: 4 8 4 8;
+  -fx-background-radius: 10;
+  -fx-text-fill: #0d3b66;
+  -fx-font-weight: 700;
+  -fx-font-size: 11px;
+}
+
+.data-list .list-cell:filled:odd {
+  -fx-background-color: rgba(224, 236, 248, 0.38);
+}
+
+.data-list .list-cell:filled:hover {
+  -fx-background-color: rgba(31, 122, 140, 0.12);
+}
+
+.data-list .list-cell:filled:selected {
+  -fx-background-color: rgba(13, 107, 138, 0.2);
+  -fx-text-fill: #0d2d49;
+}
+
+.summary-area,
+.log-area {
+  -fx-font-family: "Consolas";
+  -fx-background-color: rgba(246, 250, 255, 0.96);
+  -fx-border-color: rgba(18, 44, 70, 0.16);
+}
+
+.log-panel {
+  -fx-padding: 16 0 0 0;
+}
+
+.log-title {
+  -fx-font-family: "Georgia";
+  -fx-font-size: 15px;
+  -fx-font-weight: 700;
+  -fx-text-fill: #0d3b66;
+}
