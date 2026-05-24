@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
 
-class Main {
+class shopping {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     Map<String, String> users = new HashMap<>();

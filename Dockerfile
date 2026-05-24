@@ -12,4 +12,4 @@ WORKDIR /app
 COPY --from=build /build/hospital-api/target/*.jar app.jar
 EXPOSE 8080
 ENV PORT 8080
-CMD ["java", "-Dserver.port=${PORT}", "-jar", "/app/app.jar"]
+CMD ["sh", "-c", "exec java -Dserver.port=$PORT -jar /app/app.jar"]
