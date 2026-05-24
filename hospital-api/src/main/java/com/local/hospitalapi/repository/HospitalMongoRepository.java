@@ -12,12 +12,14 @@ import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Sorts;
 import org.bson.Document;
 import org.springframework.stereotype.Repository;
+import org.springframework.context.annotation.Primary;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository("mongoRepository")
+@Primary
 @ConditionalOnProperty(name = "MONGO_URI")
 public class HospitalMongoRepository implements HospitalRepository {
 
