@@ -27,8 +27,16 @@ public class HospitalController {
 
   private final com.local.hospitalapi.repository.HospitalRepository repository;
 
-  public HospitalController(com.local.hospitalapi.repository.HospitalRepository repository) {
-    this.repository = repository;
+  public HospitalController(java.util.List<com.local.hospitalapi.repository.HospitalRepository> repositories) {
+    // Prefer the Mongo implementation when available, otherwise use the first
+    // available
+    this.repository = repositories.stream()
+        .filter(r -> r.getClass().getSimpleName().toLowerCase().contains("mongo"))
+        .findFirst()
+        .orElseGet(() -> repositories.isEmpty() ? null : repositories.get(0));
+    if (this.repository == null) {
+      throw new IllegalStateException("No HospitalRepository bean available");
+    }
   }
 
   @GetMapping("/health")
