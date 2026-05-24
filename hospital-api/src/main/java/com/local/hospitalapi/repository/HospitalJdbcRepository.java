@@ -11,10 +11,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 
 @Repository
-@ConditionalOnMissingBean(com.local.hospitalapi.repository.HospitalRepository.class)
 public class HospitalJdbcRepository implements HospitalRepository {
 
   private final JdbcTemplate jdbcTemplate;
